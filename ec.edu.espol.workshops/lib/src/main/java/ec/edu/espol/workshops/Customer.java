@@ -1,5 +1,10 @@
 package ec.edu.espol.workshops;
 
+/**
+ * Clase
+ * @author JMaci
+ *
+ */
 public class Customer {
 	private int age;
 	private Sex sex;
