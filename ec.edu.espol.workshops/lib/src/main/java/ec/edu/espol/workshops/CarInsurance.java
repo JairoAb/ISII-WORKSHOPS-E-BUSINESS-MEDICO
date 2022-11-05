@@ -11,6 +11,11 @@ import java.util.Scanner;
  * 
  */
 public class CarInsurance {
+	static int basePremium;
+	static int age;
+	static String sex;
+	static String married;
+	static String validLicense;
 	
 	/**
 	 * Class principal
@@ -21,29 +26,29 @@ public class CarInsurance {
 		Scanner input = new Scanner(System.in);
 		try {
 			System.out.println("Write the customer's age:");
-			int basePremium = 500;
-			int age = input.nextInt();
+			basePremium = 500;
+			age = input.nextInt();
 			if(!(age >= 18 && age <= 80)){
 				throw new InputMismatchException();
 			}
 			input.nextLine();
 			
 			System.out.println("Write the customer's sex (F/M):");
-			String sex = input.nextLine();
+			sex = input.nextLine();
 			System.out.println(sex);
 			if(!(sex.equals("F") || sex.equals("M"))){
 				throw new InputMismatchException();
 			}
 			
 			System.out.println("Is the customer married? (Y/N):");
-			String married = input.nextLine();
+			married = input.nextLine();
 			if(!(married.equals("Y") || married.equals("N"))) {
 				throw new InputMismatchException();
 			}
 			
 			//We assume the verification of the license is made by the user
 			System.out.println("Is the customer's license valid? (Y/N):");
-			String validLicense = input.nextLine();
+			validLicense = input.nextLine();
 			if(!(validLicense.equals("Y") || validLicense.equals("N"))){
 				throw new InputMismatchException();
 			}
