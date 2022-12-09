@@ -21,7 +21,7 @@ public class CarInsurance {
 		Scanner input = new Scanner(System.in);
 		try {
 			System.out.println("Write the customer's age:");
-			int basePremium = 500;
+			int basePremium = 600;
 			int age = input.nextInt();
 			if(!(age >= 18 && age <= 80)){
 				throw new InputMismatchException();
