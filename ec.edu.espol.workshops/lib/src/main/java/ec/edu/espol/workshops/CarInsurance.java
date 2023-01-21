@@ -63,6 +63,14 @@ public class CarInsurance {
 				basePremium -= 100;
 			}
 			
+			if(married.equals("Y") && (age>30 && age<60)){
+				basePremium -= 100;
+			}
+			
+			if(married.equals("N") && sex.equals("F") && age<60){
+				basePremium -= 50;
+			}
+			
 			if(basePremium < 0){
 				throw new InputMismatchException();
 			}
